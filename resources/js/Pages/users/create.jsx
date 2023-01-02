@@ -1,7 +1,7 @@
 import React from 'react';
 import './../../../css/App.css';
 import { useForm } from '@inertiajs/inertia-react';
-import { Autocomplete, Button, TextField, Typography } from '@mui/material';
+import { Button, TextField, Typography } from '@mui/material';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import TextFieldWithIcon from '@/Components/Inputs/TextFieldWithIcon';
 import UserIcon from '@/Components/Icons/UserIcon';

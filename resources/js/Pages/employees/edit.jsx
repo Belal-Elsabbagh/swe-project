@@ -12,15 +12,15 @@ import InputWithIcon from '@/Components/Inputs/InputWithIcon';
 import SkillsIcon from '@/Components/Icons/SkillsIcon';
 
 export default function edit(props) {
-  const resource = 'employee';
-  const resourcePlural = `${resource}s`;
-  const employee = props.employee.data;
   const { data, setData, errors, put } = useForm({
     firstName: employee.first_name,
     lastName: employee.last_name,
     email: employee.email,
     skills: employee.skills.map((i) => i.id),
   });
+  const resource = 'employee';
+  const resourcePlural = `${resource}s`;
+  const employee = props.employee.data;
   function updateFormData(e) {
     setData((currentData) => ({
       ...currentData,
