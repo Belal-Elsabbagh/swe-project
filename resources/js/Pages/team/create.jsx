@@ -1,15 +1,11 @@
 import React from 'react';
-import { useForm } from '@inertiajs/inertia-react';
-import { Inertia } from '@inertiajs/inertia';
+import {useForm} from '@inertiajs/inertia-react';
 import {
-  Autocomplete,
   Button,
   FormControl,
-  Input,
   InputLabel,
   MenuItem,
   Select,
-  TextField,
   Typography,
 } from '@mui/material';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
@@ -20,7 +16,7 @@ import UserIcon from '@/Components/Icons/UserIcon';
 
 export default function edit(props) {
   const projectId = props.project.id;
-  const { data, setData, errors, post } = useForm({
+  const {data, setData, errors, post} = useForm({
     employee: null,
     utilization: null,
   });
@@ -52,7 +48,7 @@ export default function edit(props) {
           id="form container"
           className="py-16 flex flex-col items-center justify-center px-24"
         >
-          <Typography sx={{ mb: 2 }} variant="h5">
+          <Typography sx={{mb: 2}} variant="h5">
             {' '}
             Add a new team member{' '}
           </Typography>
@@ -60,7 +56,7 @@ export default function edit(props) {
             <div id="form">
               <InputWithIcon
                 input={
-                  <FormControl sx={{ minWidth: 1 }}>
+                  <FormControl sx={{minWidth: 1}}>
                     {' '}
                     <InputLabel id="demo-simple-select-label">
                       Employee
@@ -68,7 +64,7 @@ export default function edit(props) {
                     <Select
                       fullWidth
                       className="bg-content"
-                      sx={{ minWidth: 1 }}
+                      sx={{minWidth: 1}}
                       name={'employee'}
                       labelId="demo-simple-select-label"
                       required

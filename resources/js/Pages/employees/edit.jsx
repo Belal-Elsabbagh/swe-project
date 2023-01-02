@@ -1,10 +1,10 @@
 import React from 'react';
 import './../../../css/App.css';
-import { useForm } from '@inertiajs/inertia-react';
+import {useForm} from '@inertiajs/inertia-react';
 import MultipleSelectCheckmarks from '@/Components/Inputs/Select/MultipleSelectCheckmarks';
-import { Button, Typography } from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Inertia } from '@inertiajs/inertia';
+import {Inertia} from '@inertiajs/inertia';
 import TextFieldWithIcon from '@/Components/Inputs/TextFieldWithIcon';
 import UserIcon from '@/Components/Icons/UserIcon';
 import MailIcon from '@/Components/Icons/MailIcon';
@@ -12,7 +12,7 @@ import InputWithIcon from '@/Components/Inputs/InputWithIcon';
 import SkillsIcon from '@/Components/Icons/SkillsIcon';
 
 export default function edit(props) {
-  const { data, setData, errors, put } = useForm({
+  const {data, setData, errors, put} = useForm({
     firstName: employee.first_name,
     lastName: employee.last_name,
     email: employee.email,
@@ -50,7 +50,7 @@ export default function edit(props) {
     >
       <div id="white container" className=" rounded-lg  bg-white">
         <div id="form container" className="px-48 py-16">
-          <Typography sx={{ mb: 2 }} variant="h5">
+          <Typography sx={{mb: 2}} variant="h5">
             {' '}
             Edit {employee.first_name}{' '}
           </Typography>

@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, OutlinedInput } from '@mui/material';
+import {FormControl, InputLabel, OutlinedInput} from '@mui/material';
 import React from 'react';
 
 export default function NumberInput({
@@ -10,14 +10,14 @@ export default function NumberInput({
   name,
 }) {
   return (
-    <FormControl sx={{ minWidth: 1 }}>
+    <FormControl sx={{minWidth: 1}}>
       <InputLabel id="demo-simple-select-label">Capacity</InputLabel>
       <OutlinedInput
         type="number"
         name={name}
-        inputProps={{ min, max, step }}
+        inputProps={{min, max, step}}
         defaultValue={defaultValue}
-        sx={{ minWidth: 1, pl: 1 }}
+        sx={{minWidth: 1, pl: 1}}
         className="bg-content"
         label="project capacity"
         variant="outlined"

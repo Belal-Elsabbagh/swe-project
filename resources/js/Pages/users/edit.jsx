@@ -1,20 +1,20 @@
 import React from 'react';
 import './../../../css/App.css';
-import { useForm } from '@inertiajs/inertia-react';
-import { Button, TextField, Typography } from '@mui/material';
+import {useForm} from '@inertiajs/inertia-react';
+import {Button, TextField, Typography} from '@mui/material';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Inertia } from '@inertiajs/inertia';
+import {Inertia} from '@inertiajs/inertia';
 import UserIcon from '@/Components/Icons/UserIcon';
 import MailIcon from '@/Components/Icons/MailIcon';
 import TextFieldWithIcon from '@/Components/Inputs/TextFieldWithIcon';
 import InputWithIcon from '@/Components/Inputs/InputWithIcon';
-import { VpnKeyOutlined } from '@mui/icons-material';
+import {VpnKeyOutlined} from '@mui/icons-material';
 
 export default function edit(props) {
   const resource = 'user';
   const resourcePlural = `${resource}s`;
-  const { user } = props;
-  const { data, setData, errors, put } = useForm({
+  const {user} = props;
+  const {data, setData, errors, put} = useForm({
     name: user.name,
     email: user.email,
     password: '',
@@ -50,7 +50,7 @@ export default function edit(props) {
       backHref={`/${resourcePlural}/${user.id}`}
     >
       <div id="white container" className="rounded-lg px-48 py-16 bg-white">
-        <Typography sx={{ mb: 2 }} variant="h5">
+        <Typography sx={{mb: 2}} variant="h5">
           {' '}
           Edit a user{' '}
         </Typography>
@@ -78,7 +78,7 @@ export default function edit(props) {
               <TextField
                 name={'password'}
                 type="password"
-                sx={{ minWidth: 1 }}
+                sx={{minWidth: 1}}
                 className="bg-content"
                 required
                 label="User's password"
@@ -94,7 +94,7 @@ export default function edit(props) {
               <TextField
                 name={'password_confirmation'}
                 type="password"
-                sx={{ minWidth: 1 }}
+                sx={{minWidth: 1}}
                 className="bg-content"
                 onChange={updateFormData}
                 required

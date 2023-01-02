@@ -1,4 +1,4 @@
-export default function UserTypeIcon({ svgClassName }) {
+export default function UserTypeIcon({svgClassName}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

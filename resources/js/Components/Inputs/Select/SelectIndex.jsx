@@ -34,7 +34,7 @@ class SelectIndex extends React.Component {
 
   updateChoices = (event) => {
     const {
-      target: { value },
+      target: {value},
     } = event;
     this.setState({
       choices: typeof value === 'string' ? value.split(',') : value,
@@ -44,10 +44,10 @@ class SelectIndex extends React.Component {
 
   render() {
     return (
-      <FormControl sx={{ minWidth: 1 }}>
+      <FormControl sx={{minWidth: 1}}>
         <InputLabel id={'simple-select'}>{this.props.label}</InputLabel>
         <Select
-          sx={{ minWidth: 1 }}
+          sx={{minWidth: 1}}
           className="bg-content"
           labelId={'simple-select'}
           name={this.props.name}

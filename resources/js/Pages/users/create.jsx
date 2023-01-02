@@ -1,19 +1,19 @@
 import React from 'react';
 import './../../../css/App.css';
-import { useForm } from '@inertiajs/inertia-react';
-import { Button, TextField, Typography } from '@mui/material';
+import {useForm} from '@inertiajs/inertia-react';
+import {Button, TextField, Typography} from '@mui/material';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import TextFieldWithIcon from '@/Components/Inputs/TextFieldWithIcon';
 import UserIcon from '@/Components/Icons/UserIcon';
 import MailIcon from '@/Components/Icons/MailIcon';
 import InputWithIcon from '@/Components/Inputs/InputWithIcon';
-import { VpnKeyOutlined } from '@mui/icons-material';
+import {VpnKeyOutlined} from '@mui/icons-material';
 import UserTypeIcon from '@/Components/Icons/UserTypeIcon';
 import SelectIndex from '@/Components/Inputs/Select/SelectIndex';
 
 export default function create(props) {
   const resource = 'user';
-  const { data, setData, errors, processing, post } = useForm({
+  const {data, setData, errors, processing, post} = useForm({
     name: '',
     email: '',
     password: '',
@@ -36,8 +36,8 @@ export default function create(props) {
     }));
   }
   const user_type = [
-    { id: 3, name: 'admin' },
-    { id: 2, name: 'leader' },
+    {id: 3, name: 'admin'},
+    {id: 2, name: 'leader'},
   ];
   return (
     <AuthenticatedLayout
@@ -48,7 +48,7 @@ export default function create(props) {
     >
       <div id="white container" className="rounded-lg px-48 py-16 bg-white">
         <div id="form container" className="px-48 pt-16">
-          <Typography sx={{ mb: 2 }} variant="h5">
+          <Typography sx={{mb: 2}} variant="h5">
             {' '}
             Add a user{' '}
           </Typography>
@@ -73,7 +73,7 @@ export default function create(props) {
                 <TextField
                   name={'password'}
                   type="password"
-                  sx={{ minWidth: 1 }}
+                  sx={{minWidth: 1}}
                   className="bg-content"
                   onChange={updateFormData}
                   required
@@ -89,7 +89,7 @@ export default function create(props) {
                 <TextField
                   name={'password_confirmation'}
                   type="password"
-                  sx={{ minWidth: 1 }}
+                  sx={{minWidth: 1}}
                   className="bg-content"
                   onChange={updateFormData}
                   required
