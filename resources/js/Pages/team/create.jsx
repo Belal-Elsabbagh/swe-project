@@ -14,12 +14,12 @@ import UtilizationIcon from '@/Components/Icons/UtilizationIcon';
 import UtilizationInput from '@/Components/Inputs/UtilizationInput';
 import UserIcon from '@/Components/Icons/UserIcon';
 
-export default function edit(props) {
-  const projectId = props.project.id;
-  const {data, setData, errors, post} = useForm({
+export default function create(props) {
+  const {setData, errors, post} = useForm({
     employee: null,
     utilization: null,
   });
+  const projectId = props.project.id;
 
   const updateFormData = (e) => {
     setData((currentData) => ({
@@ -72,9 +72,8 @@ export default function edit(props) {
                     >
                       {props.employees.map((i) => {
                         return (
-                          <MenuItem value={i.id}>
-                            {' '}
-                            {i.first_name + ' ' + i.last_name}
+                          <MenuItem key={i.id} value={i.id}>
+                            {` ${i.first_name} ${i.last_name}`}
                           </MenuItem>
                         );
                       })}

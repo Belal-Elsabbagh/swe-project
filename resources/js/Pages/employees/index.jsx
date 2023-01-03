@@ -1,11 +1,11 @@
 import React from 'react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { isAdmin } from '@/lib';
+import {isAdmin} from '@/lib';
 import PersonnelNav from '@/Components/PersonnelNav';
 import IndexContent from '@/Components/IndexContent';
 import EmployeeIndexFilter from '@/Components/IndexContent/IndexFilters/EmployeeIndexFilter';
 import Table from '@/Components/Outputs/Table';
-import { employeeIndexTableRowCells } from '@/lib/factories/TableFactories';
+import {employeeIndexTableRowCells} from '@/lib/factories/tables';
 
 export default function index(props) {
   const employees = props.employees.data;

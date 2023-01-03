@@ -4,13 +4,13 @@ import AttributeDisplay from '@/Components/Outputs/AttributeDisplay';
 import ItemHeader from '@/Components/ItemHeader';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import CreateResource from '@/Components/Inputs/CreateResource';
-import { isAdmin } from '@/lib';
-import { Edit } from '@mui/icons-material';
+import {isAdmin} from '@/lib';
+import {Edit} from '@mui/icons-material';
 import Table from '@/Components/Outputs/Table';
-import { teamIndexTableRowCells } from '@/lib/factories/TableFactories';
+import {teamIndexTableRowCells} from '@/lib/factories/tables';
 
 export default function show(props) {
-  let { project } = props;
+  let {project} = props;
   project = project.data;
   let userType = props.auth.user.user_type_id;
   return (
